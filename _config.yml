@@ -1,0 +1,9 @@
+# GitHub Pages Configuration for Claudio Mazzi's Academic CV & Profile
+title: "Claudio Mazzi"
+description: "Ph.D. Candidate in Artificial Intelligence for Society | Healthcare Data Science, Machine Learning & Applied Statistics"
+theme: jekyll-theme-minimal
+author: "Claudio Mazzi"
+show_downloads: false
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
