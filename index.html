@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claudio Mazzi | Postdoctoral Researcher in Statistics, AI & Healthcare</title>
+  <meta name="description" content="Academic personal website of Claudio Mazzi, Postdoctoral Researcher at L'EMbeDS, Sant'Anna School of Advanced Studies (Pisa, Italy). Differential Privacy, Riemannian Statistics, Functional Data Analysis, Uncertainty Quantification, and Healthcare ML.">
+  <meta name="author" content="Claudio Mazzi">
+  
+  <!-- Academicons & FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #0d2346;
+      --primary-light: #1a3a6c;
+      --accent: #2563eb;
+      --accent-subtle: #eff6ff;
+      --accent-border: #bfdbfe;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --text-light: #6b7280;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border-subtle: #e2e8f0;
+      --border-card: #e5e7eb;
+      --tag-bg: #f1f5f9;
+      --tag-text: #334155;
+      --tag-accent-bg: #e0e7ff;
+      --tag-accent-text: #3730a3;
+      --success-bg: #ecfdf5;
+      --success-text: #065f46;
+      --award-bg: #fefce8;
+      --award-text: #854d0e;
+      --award-border: #fef08a;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.15s ease-in-out;
+    }
+
+    a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    /* Top Sticky Header */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all 0.2s ease;
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand span.role {
+      font-weight: 500;
+      font-size: 0.82rem;
+      color: var(--text-light);
+      background: var(--tag-bg);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-sm);
+    }
+
+    nav.nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    nav.nav-links a {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    nav.nav-links a:hover {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .btn-cv-header {
+      background: var(--primary);
+      color: #ffffff !important;
+      padding: 0.4rem 0.9rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-cv-header:hover {
+      background: var(--primary-light);
+      text-decoration: none;
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* Hero Section */
+    .hero-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      border: 1px solid var(--border-card);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text .subtitle {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-text .affiliations {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .hero-text .bio-statement {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      max-width: 760px;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .pill {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      background: var(--accent-subtle);
+      color: var(--accent);
+      border: 1px solid var(--accent-border);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .action-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-light);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: var(--text-main);
+      border: 1px solid var(--border-card);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-subtle);
+      text-decoration: none;
+    }
+
+    /* Profile Avatar / Badge */
+    .hero-avatar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    .avatar-placeholder {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      font-weight: 700;
+      box-shadow: var(--shadow-md);
+      border: 4px solid #fff;
+    }
+
+    .status-badge {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      background: var(--success-bg);
+      color: var(--success-text);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .status-badge .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-title {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 2px solid var(--border-subtle);
+      padding-bottom: 0.6rem;
+    }
+
+    .section-title i {
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+
+    /* Research Pillars Grid */
+    .grid-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pillar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 1.6rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-border);
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-subtle);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .pillar-card h3 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.6rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .pillar-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .pillar-keywords span {
+      font-size: 0.75rem;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Timeline & Experience Items */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+
+    .timeline-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .timeline-item.highlight-postdoc {
+      border-left: 4px solid var(--accent);
+      background: linear-gradient(to right, #fbfdff, #ffffff);
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.4rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .timeline-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .timeline-role {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .timeline-date {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-light);
+      background: var(--tag-bg);
+      padding: 0.2rem 0.65rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .timeline-institution {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .timeline-item ul {
+      margin-left: 1.25rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .timeline-item ul li strong {
+      color: var(--text-main);
+    }
+
+    /* Publications List */
+    .pub-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .pub-tab-btn {
+      padding: 0.45rem 0.95rem;
+      background: #fff;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .pub-tab-btn.active, .pub-tab-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .pub-category {
+      margin-bottom: 2rem;
+    }
+
+    .pub-category h3 {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1rem;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .pub-card:hover {
+      border-color: var(--accent-border);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pub-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.4;
+      margin-bottom: 0.4rem;
+    }
+
+    .pub-authors {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .pub-authors strong {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .pub-venue {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: 0.8rem;
+    }
+
+    .pub-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin-top: 0.6rem;
+    }
+
+    .pub-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-sm);
+      background: var(--accent-subtle);
+      color: var(--accent);
+      border: 1px solid var(--accent-border);
+    }
+
+    .pub-link-btn:hover {
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .pub-link-pdf {
+      background: #fef2f2;
+      color: #b91c1c;
+      border-color: #fecaca;
+    }
+
+    .pub-link-pdf:hover {
+      background: #b91c1c;
+      color: #fff;
+      border-color: #b91c1c;
+    }
+
+    .award-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-sm);
+      background: var(--award-bg);
+      color: var(--award-text);
+      border: 1px solid var(--award-border);
+    }
+
+    /* Skills & Teaching Grid */
+    .grid-two {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 1.6rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .info-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-group {
+      margin-bottom: 1rem;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .tech-tag {
+      font-size: 0.82rem;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #fff;
+      border-top: 1px solid var(--border-subtle);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-light);
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    footer .footer-links a {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+    }
+
+    footer .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 850px) {
+      .hero-card {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .hero-avatar {
+        order: -1;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+      .avatar-placeholder {
+        width: 100px;
+        height: 100px;
+        font-size: 2.2rem;
+      }
+      nav.nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand">
+        <span>Claudio Mazzi</span>
+        <span class="role">Postdoc @ Sant'Anna Pisa</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching & Skills</a>
+        <a href="cv_claudio_mazzi.pdf" target="_blank" class="btn-cv-header">
+          <i class="fa-solid fa-file-pdf"></i> Download CV
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- HERO / PROFILE SECTION -->
+    <div class="hero-card" id="about">
+      <div class="hero-text">
+        <div class="status-badge">
+          <span class="dot"></span> Postdoctoral Researcher (Nov 2026 – Present)
+        </div>
+        <h1 style="margin-top: 0.7rem;">Claudio Mazzi</h1>
+        <div class="subtitle">Postdoctoral Researcher in Computational Statistics, Machine Learning & AI in Healthcare</div>
+        <div class="affiliations">
+          <div><i class="fa-solid fa-building-columns" style="width: 18px; color: var(--accent);"></i> <strong>L'EMbeDS</strong> & <strong>MeS Laboratory</strong>, Sant'Anna School of Advanced Studies, Pisa, Italy</div>
+          <div><i class="fa-solid fa-graduation-cap" style="width: 18px; color: var(--accent);"></i> Ph.D. in Artificial Intelligence for Society — University of Pisa & Sant'Anna School of Advanced Studies</div>
+          <div><i class="fa-solid fa-atom" style="width: 18px; color: var(--accent);"></i> Physicist by training (M.Sc. Physics, University of Milan-Bicocca)</div>
+        </div>
+
+        <p class="bio-statement">
+          I develop advanced <strong>statistical learning, machine learning, and AI methodologies for high-dimensional, structured, and non-Euclidean data</strong>. My research interfaces theoretical rigor and real-world deployment, focusing on <strong>privacy-preserving synthetic data generation</strong> (Differential Privacy, intrinsic Riemannian geometry), <strong>functional uncertainty quantification</strong> (RKHS, non-stationary kernel engines), and translating massive healthcare records into <strong>evidence-based clinical decision-support and health policy frameworks</strong>.
+        </p>
+
+        <div class="hero-pills">
+          <span class="pill"><i class="fa-solid fa-shield-halved"></i> Differential Privacy</span>
+          <span class="pill"><i class="fa-solid fa-chart-line"></i> Functional Data ($N=1$)</span>
+          <span class="pill"><i class="fa-solid fa-shapes"></i> Riemannian Manifolds</span>
+          <span class="pill"><i class="fa-solid fa-heart-pulse"></i> Healthcare Decision Support</span>
+          <span class="pill"><i class="fa-solid fa-brain"></i> Explainable AI</span>
+        </div>
+
+        <div class="action-links">
+          <a href="mailto:claudio.mazzi@santannapisa.it" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i> Email Me
+          </a>
+          <a href="cv_claudio_mazzi.pdf" target="_blank" class="btn btn-outline">
+            <i class="fa-solid fa-file-pdf" style="color: #ef4444;"></i> Curriculum Vitae (PDF)
+          </a>
+          <a href="https://orcid.org/0009-0007-9407-9897" target="_blank" class="btn btn-outline">
+            <i class="ai ai-orcid" style="color: #a6ce39;"></i> ORCID
+          </a>
+          <a href="https://github.com/claudiomzi" target="_blank" class="btn btn-outline">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/claudio-mazzi/?isSelfProfile=true" target="_blank" class="btn btn-outline">
+            <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-avatar">
+        <div class="avatar-placeholder">CM</div>
+        <div style="font-size: 0.85rem; color: var(--text-light); text-align: center;">
+          <i class="fa-solid fa-location-dot"></i> Pisa, Italy
+        </div>
+      </div>
+    </div>
+
+    <!-- RESEARCH PILLARS -->
+    <section id="research">
+      <h2 class="section-title"><i class="fa-solid fa-microscope"></i> Research Core & Methodological Program</h2>
+      
+      <div class="grid-pillars">
+        <!-- Pillar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Differential Privacy & Riemannian Statistics</h3>
+          <p>
+            Developing footpoint-invariant Riemannian cross-covariance and correlation metrics for manifold-valued random objects (spheres, SPD matrices, Kendall's shape space) and formal Differential Privacy mechanisms on non-Euclidean geometries, in collaboration with Carlos J. Soto and Roberto Molinari.
+          </p>
+          <div class="pillar-keywords">
+            <span>Differential Privacy</span>
+            <span>Riemannian Manifolds</span>
+            <span>AIRM</span>
+            <span>Kendall Shape</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-wave-square"></i></div>
+          <h3>Functional Uncertainty Quantification ($N=1$)</h3>
+          <p>
+            Statistical inference and exact synthetic trajectory generation for strictly unique, non-stationary stochastic processes ($N=1$). Utilizing Base-Modulated Non-Stationary (BMNS) kernels, orthonormal splinet expansions, and simultaneous conformal prediction bands for climate and longitudinal dynamics.
+          </p>
+          <div class="pillar-keywords">
+            <span>FDA</span>
+            <span>RKHS</span>
+            <span>Splinets</span>
+            <span>Conformal Prediction</span>
+            <span>N=1 Systems</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h3>Clinical ML & Healthcare Decision Support</h3>
+          <p>
+            Machine learning and Explainable AI (XAI) applied to multi-regional administrative cohorts (PRIN RETIN) to forecast micro/macro-vascular complications in Type-2 Diabetes, stochastic conformance checking in diabetic foot care, and NLP for workplace violence classification, with Prof. Chiara Seghieri.
+          </p>
+          <div class="pillar-keywords">
+            <span>Healthcare AI</span>
+            <span>Explainable AI</span>
+            <span>Type-2 Diabetes</span>
+            <span>NLP</span>
+            <span>Clinical Pathways</span>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-calculator"></i></div>
+          <h3>Actuarial Reserving & Health Systems Auditing</h3>
+          <p>
+            Deployable stochastic loss-reserving methodologies for medical malpractice liabilities (adopted by Tuscany Regional Health Authority - <em>Regione Toscana</em>) and statistical quality auditing over 140+ performance indicators across regional health systems (MeS System).
+          </p>
+          <div class="pillar-keywords">
+            <span>Stochastic Reserving</span>
+            <span>Medical Malpractice</span>
+            <span>Policy Auditing</span>
+            <span>Data Pipelines</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC & PROFESSIONAL APPOINTMENTS -->
+    <section id="experience">
+      <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Academic & Professional Experience</h2>
+      <div class="timeline">
+        
+        <!-- PostDoc -->
+        <div class="timeline-item highlight-postdoc">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-title">Postdoctoral Researcher</span>
+              <div class="timeline-role">L'EMbeDS, Sant'Anna School of Advanced Studies</div>
+            </div>
+            <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Nov 2026 – Present</span>
+          </div>
+          <div class="timeline-institution"><i class="fa-solid fa-location-dot"></i> Pisa, Italy</div>
+          <ul>
+            <li><strong>Advanced Methodological Research:</strong> Developing advanced statistical learning, machine learning, and AI methodologies for high-dimensional and structured data.</li>
+            <li><strong>Core Research Pillars:</strong> Privacy-preserving synthetic data generation under Differential Privacy (DP), intrinsic Riemannian manifold statistics, functional data analysis ($N=1$), and non-stationary uncertainty quantification.</li>
+            <li><strong>Translational Decision Support:</strong> Translating complex primary and secondary clinical records into evidence-based decision-support frameworks and healthcare system evaluation models.</li>
+          </ul>
+        </div>
+
+        <!-- Visiting Auburn -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-title">Visiting Researcher</span>
+              <div class="timeline-role">Department of Mathematics and Statistics, Auburn University</div>
+            </div>
+            <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Sep 2026 – Oct 2026</span>
+          </div>
+          <div class="timeline-institution"><i class="fa-solid fa-location-dot"></i> Auburn, Alabama, USA &middot; Host: Prof. Roberto Molinari</div>
+          <ul>
+            <li>Methodological research in Functional Data Analysis (FDA) and non-stationary kernel engines.</li>
+            <li>Investigated RKHS inductive bias and orthonormal splinet expansions for synthetic functional data generation from single longitudinal trajectories ($N = 1$).</li>
+          </ul>
+        </div>
+
+        <!-- Research Collaborator MeS -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-title">Research Collaborator (Co.co.co.)</span>
+              <div class="timeline-role">MeS Laboratory, Sant'Anna School of Advanced Studies</div>
+            </div>
+            <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Jan 2024 – Present</span>
+          </div>
+          <div class="timeline-institution"><i class="fa-solid fa-location-dot"></i> Pisa, Italy</div>
+          <ul>
+            <li><strong>Healthcare Registry Architecture & Governance:</strong> Lead data manager for architectural design, ingestion pipelines, automated ETL workflows, and statistical auditing of regional administrative databases (SPA - Outpatient, PS - Emergency Department).</li>
+            <li><strong>Performance Evaluation System (MeS System):</strong> Directed computational execution and cross-regional benchmarking of 140+ indicators across emergency care efficiency, outpatient access, scientific productivity, and clinical risk.</li>
+            <li><strong>Scientific Lead for Claims Reserving:</strong> Principal investigator for actuarial estimation of healthcare claims reserves (<em>riserva sinistri</em>) for Tuscany Regional Health Authority (<em>Regione Toscana</em>); designed advanced stochastic claims reserving model formally integrated into regional administrative decision-making.</li>
+          </ul>
+        </div>
+
+        <!-- Research Fellow Palermo -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-title">Research Fellow (Assegnista di Ricerca)</span>
+              <div class="timeline-role">Department of Cultures and Societies, University of Palermo</div>
+            </div>
+            <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Mar 2025 – Aug 2025</span>
+          </div>
+          <div class="timeline-institution"><i class="fa-solid fa-location-dot"></i> Palermo, Italy &middot; National Research Project PRIN RETIN</div>
+          <ul>
+            <li>Analyzed large-scale Chronic Related Group (CReG) longitudinal registries for Type-2 Diabetes Mellitus cohorts.</li>
+            <li>Developed and validated Explainable AI (XAI) models predicting onset and progression of micro- and macro-vascular complications.</li>
+            <li>Coordinated data linkage and statistical modeling across a joint multi-regional cohort (Sicily, Tuscany, Lombardy).</li>
+          </ul>
+        </div>
+
+        <!-- Research Fellow MeS 2022-2023 -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-title">Research Fellow (Assegnista di Ricerca)</span>
+              <div class="timeline-role">MeS Laboratory, Sant'Anna School of Advanced Studies</div>
+            </div>
+            <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Dec 2022 – Oct 2023</span>
+          </div>
+          <div class="timeline-institution"><i class="fa-solid fa-location-dot"></i> Pisa, Italy</div>
+          <ul>
+            <li>Conducted collaborative actuarial research with The BioRobotics Institute on stochastic loss-reserving for medical malpractice liability in public hospitals (officially adopted by Regione Toscana).</li>
+            <li>Managed administrative data pipelines for emergency and outpatient registries.</li>
+            <li>Co-designed statistical pipelines and authored evaluation monographs on healthcare personnel well-being and organizational climate.</li>
+          </ul>
+        </div>
+
+        <!-- Teaching Math Physics -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-title">High School Teacher of Mathematics and Physics</span>
+              <div class="timeline-role">Liceo Melchiorre Gioia & Liceo Scientifico Lorenzo Respighi</div>
+            </div>
+            <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Sep 2020 – Jun 2022</span>
+          </div>
+          <div class="timeline-institution"><i class="fa-solid fa-location-dot"></i> Piacenza, Italy</div>
+          <ul>
+            <li>Taught advanced mathematics and physics curricula to high school students.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-title">Ph.D. in Artificial Intelligence for Society</span>
+              <div class="timeline-role">University of Pisa & Sant'Anna School of Advanced Studies</div>
+            </div>
+            <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Nov 2023 – Oct 2026 (Expected)</span>
+          </div>
+          <div class="timeline-institution"><i class="fa-solid fa-location-dot"></i> Pisa, Italy &middot; Advisor: Prof. Chiara Seghieri</div>
+          <ul>
+            <li>National Ph.D. Program in Artificial Intelligence (39th Cycle), funded by the Italian Ministry of University and Research (MUR).</li>
+            <li>Joint affiliation: Dept. of Computer Science (UniPi) and L'EMbeDS / MeS Laboratory (Sant'Anna).</li>
+            <li><em>Dissertation focus:</em> Advanced statistical machine learning, explainable AI, and NLP methods for healthcare decision support and health analytics.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-title">Master's Degree in Physics (Laurea Magistrale)</span>
+              <div class="timeline-role">University of Milan-Bicocca</div>
+            </div>
+            <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Graduated Mar 2021 (A.Y. 2019/2020)</span>
+          </div>
+          <div class="timeline-institution"><i class="fa-solid fa-location-dot"></i> Milan, Italy &middot; <strong>Final Grade: 108 / 110</strong></div>
+          <ul>
+            <li><em>Dissertation:</em> Large Charge Expansion and Semiclassical Method: The XYZ-model in BPS and superfluid phase.</li>
+            <li>Rigorous foundations in theoretical physics, mathematical methods, and statistical mechanics.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <span class="timeline-title">Bachelor's Degree in Physics (Laurea Triennale)</span>
+              <div class="timeline-role">University of Milan-Bicocca</div>
+            </div>
+            <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Graduated Mar 2017 (A.Y. 2015/2016)</span>
+          </div>
+          <div class="timeline-institution"><i class="fa-solid fa-location-dot"></i> Milan, Italy &middot; Final Grade: 98 / 110</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS & SCHOLARLY OUTPUT -->
+    <section id="publications">
+      <h2 class="section-title"><i class="fa-solid fa-book-open"></i> Publications & Scholarly Output</h2>
+
+      <!-- Articles in Peer-Reviewed International Journals -->
+      <div class="pub-category">
+        <h3><i class="fa-solid fa-file-lines"></i> Peer-Reviewed International Journals</h3>
+        
+        <div class="pub-card">
+          <div class="pub-title">Stochastic Claims Reserve in the Healthcare System: A Methodology Applied to Italian Data</div>
+          <div class="pub-authors"><strong>Claudio Mazzi</strong>, Angelo Damone, Andrea Vandelli, Gastone Ciuti, and Milena Vainieri</div>
+          <div class="pub-venue">Risks, 12(2), 24 (2024)</div>
+          <div class="pub-badges">
+            <a href="https://doi.org/10.3390/risks12020024" target="_blank" class="pub-link-btn">
+              <i class="fa-solid fa-external-link"></i> DOI: 10.3390/risks12020024
+            </a>
+            <a href="papers/risks_2024_stochastic_claims_reserve.pdf" target="_blank" class="pub-link-btn pub-link-pdf">
+              <i class="fa-solid fa-file-pdf"></i> Read Paper (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Working Papers & Preprints -->
+      <div class="pub-category">
+        <h3><i class="fa-solid fa-clock"></i> Working Papers & Preprints</h3>
+
+        <!-- Riemannian Covariance -->
+        <div class="pub-card">
+          <div class="pub-title">Intrinsic Riemannian Cross-covariance for Manifold-valued Random Objects</div>
+          <div class="pub-authors">Carlos J. Soto, Cheng Wang, Yujing Huang, Xiaoyu Chen, and <strong>Claudio Mazzi</strong></div>
+          <div class="pub-venue">arXiv preprint arXiv:2606.10212 (2026)</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.4rem;">
+            Introduces footpoint-invariant intrinsic Riemannian cross-covariance and correlation via parallel transport on nonlinear Riemannian manifolds (spheres, SPD matrices under AIRM, Kendall's shape space), establishing consistency and asymptotic normality.
+          </p>
+          <div class="pub-badges">
+            <a href="https://arxiv.org/abs/2606.10212" target="_blank" class="pub-link-btn">
+              <i class="fa-solid fa-external-link"></i> arXiv:2606.10212
+            </a>
+            <a href="papers/soto_wang_mazzi_2026_intrinsic_riemannian_cross_covariance.pdf" target="_blank" class="pub-link-btn pub-link-pdf">
+              <i class="fa-solid fa-file-pdf"></i> Read Preprint (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- JASA Paper N=1 -->
+        <div class="pub-card">
+          <div class="pub-title">Single-Trajectory ($N=1$) Non-Stationary Functional Inference, Multi-Center Robustness, and Continuous Arctic Amplification Dynamics (1880–2045)</div>
+          <div class="pub-authors"><strong>Claudio Mazzi</strong>, Jacopo Di Iorio, and Roberto Molinari</div>
+          <div class="pub-venue">Working Paper / In Preparation for Journal of the American Statistical Association (JASA) (2026)</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.4rem;">
+            Unified Reproducing Kernel Hilbert Space (RKHS) and orthonormal Splinet generative framework with Base-Modulated Non-Stationary (BMNS) covariance kernels for functional uncertainty quantification, modern warming acceleration, and simultaneous conformal prediction bands.
+          </p>
+          <div class="pub-badges">
+            <span class="pub-link-btn" style="background: var(--tag-bg); color: var(--tag-text); border-color: var(--border-subtle);">
+              <i class="fa-solid fa-pen-nib"></i> JASA Submission
+            </span>
+          </div>
+        </div>
+
+        <!-- SSRN Workplace Violence -->
+        <div class="pub-card">
+          <div class="pub-title">Locally Deployable AI for Legal Classification and Risk Stratification of Workplace Violence in Healthcare: A Retrospective Study from Italy</div>
+          <div class="pub-authors"><strong>Claudio Mazzi</strong>, Matilde Contestabile, Paolo Ferragina, Monica Chillà, Gaetana Morgante, Francesca Chiaromonte, Massimo Ughi, and Chiara Seghieri</div>
+          <div class="pub-venue">Available at SSRN (2026)</div>
+          <div class="pub-badges">
+            <a href="https://ssrn.com/abstract=7165564" target="_blank" class="pub-link-btn">
+              <i class="fa-solid fa-external-link"></i> SSRN: 7165564
+            </a>
+            <a href="https://doi.org/10.2139/ssrn.7165564" target="_blank" class="pub-link-btn">
+              <i class="fa-solid fa-external-link"></i> DOI: 10.2139/ssrn.7165564
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Refereed Conference Proceedings & Book Chapters -->
+      <div class="pub-category">
+        <h3><i class="fa-solid fa-people-group"></i> Refereed Conference Proceedings & Book Chapters</h3>
+
+        <!-- SIS FENSTATS Best Poster Award -->
+        <div class="pub-card">
+          <div class="pub-title">Identifying Structural Typologies of Workplace Aggression in Healthcare: A Text–Validated Analysis of Toscana Nord Ovest Reports</div>
+          <div class="pub-authors">Chiara Ferrara, Matilde Bisi, <strong>Claudio Mazzi</strong>, Francesca Chiaromonte, Paolo Ferragina, Massimo Ughi, and Chiara Seghieri</div>
+          <div class="pub-venue">Statistical Science: From Theory to Applied Research IV, Springer Nature Switzerland, Cham (2026)</div>
+          <div class="pub-badges">
+            <a href="https://doi.org/10.1007/978-3-032-30665-4_7" target="_blank" class="pub-link-btn">
+              <i class="fa-solid fa-external-link"></i> DOI: 10.1007/978-3-032-30665-4_7
+            </a>
+            <a href="papers/sisfenstats_2026_workplace_aggression.pdf" target="_blank" class="pub-link-btn pub-link-pdf">
+              <i class="fa-solid fa-file-pdf"></i> Read Paper (PDF)
+            </a>
+            <span class="award-badge"><i class="fa-solid fa-trophy"></i> Best Poster Award Winner — SIS FENStatS 2026</span>
+          </div>
+        </div>
+
+        <!-- Springer Book Chapter T2D -->
+        <div class="pub-card">
+          <div class="pub-title">Machine Learning and Explainable AI for Type-2 Diabetes Management</div>
+          <div class="pub-authors"><strong>C. Mazzi</strong>, Roberto Molinari, and Chiara Seghieri</div>
+          <div class="pub-venue">Statistical Learning, Data Science and Complex Data, pp. 175–180. Springer Nature Switzerland (2025)</div>
+          <div class="pub-badges">
+            <a href="https://doi.org/10.1007/978-3-031-96736-8_30" target="_blank" class="pub-link-btn">
+              <i class="fa-solid fa-external-link"></i> DOI: 10.1007/978-3-031-96736-8_30
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Manuscripts Under Peer Review -->
+      <div class="pub-category">
+        <h3><i class="fa-solid fa-hourglass-half"></i> Manuscripts Under Peer Review</h3>
+
+        <div class="pub-card">
+          <div class="pub-title">Machine Learning and Explainable AI for Type-2 Diabetes Management: A Multi-Regional Study Using Administrative Health Data</div>
+          <div class="pub-authors"><strong>Claudio Mazzi</strong>, Chiara Seghieri, Roberto Molinari, Paolo Berta, and Mauro Ferrante</div>
+          <div class="pub-venue">Submitted to: <strong>Journal of the Royal Statistical Society: Series C (Applied Statistics)</strong> (2026)</div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-title">Predicting Drug Shortages: An Explainable Machine Learning Study Using Administrative Data</div>
+          <div class="pub-authors">Benedetta Dal Canto, <strong>Claudio Mazzi</strong>, Giaele Moretti, Bruna Vinci, Domenico Di Giorgio, Oscar Cruciani, Stefania Vasselli, and Milena Vainieri</div>
+          <div class="pub-venue">Submitted to: <strong>Health Care Management Science</strong> (2026)</div>
+        </div>
+
+      </div>
+
+      <!-- Institutional Research Monographs -->
+      <div class="pub-category">
+        <h3><i class="fa-solid fa-landmark"></i> Institutional Research Monographs & Policy Evaluation Reports</h3>
+
+        <div class="pub-card">
+          <div class="pub-title">Indagine di clima organizzativo 2023 - Azienda Sanitaria dell'Alto Adige</div>
+          <div class="pub-authors">Nicola Bellè, Paola Cantarelli, Domenico Cerasuolo, Giuseppe D'Orio, <strong>Claudio Mazzi</strong>, and Luca Scopis (2023)</div>
+          <div class="pub-venue">Sant'Anna School of Advanced Studies &middot; Monograph Series</div>
+          <div class="pub-badges">
+            <a href="https://hdl.handle.net/11382/561352" target="_blank" class="pub-link-btn">
+              <i class="fa-solid fa-external-link"></i> Handle: 11382/561352
+            </a>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-title">Indagine di clima organizzativo - Sistema sanitario della Toscana - 2023</div>
+          <div class="pub-authors">Nicola Bellè, Paola Cantarelli, Luca Pirrotta, Luca Scopis, Veronica Cruciani, Domenico Cerasuolo, <strong>Claudio Mazzi</strong>, and Giuseppe D'Orio (2023)</div>
+          <div class="pub-venue">Sant'Anna School of Advanced Studies &middot; Monograph Series</div>
+          <div class="pub-badges">
+            <a href="https://hdl.handle.net/11382/555572" target="_blank" class="pub-link-btn">
+              <i class="fa-solid fa-external-link"></i> Handle: 11382/555572
+            </a>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-title">Indagine di clima organizzativo - Sistema socio sanitario del Veneto - 2023</div>
+          <div class="pub-authors">Nicola Bellè, Paola Cantarelli, Luca Pirrotta, Luca Scopis, <strong>Claudio Mazzi</strong>, and Giuseppe D'Orio (2023)</div>
+          <div class="pub-venue">Sant'Anna School of Advanced Studies &middot; Monograph Series</div>
+          <div class="pub-badges">
+            <a href="https://hdl.handle.net/11382/553332" target="_blank" class="pub-link-btn">
+              <i class="fa-solid fa-external-link"></i> Handle: 11382/553332
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TEACHING, TALKS & TECHNICAL SKILLS -->
+    <section id="teaching">
+      <h2 class="section-title"><i class="fa-solid fa-chalkboard-user"></i> Teaching, Talks & Competencies</h2>
+
+      <div class="grid-two">
+        
+        <!-- Teaching & Training -->
+        <div class="info-card">
+          <h3><i class="fa-solid fa-person-chalkboard" style="color: var(--accent);"></i> Teaching & Mentorship</h3>
+          
+          <div style="margin-bottom: 1.2rem;">
+            <div style="font-weight: 700; color: var(--primary);">Teaching Assistant — Applied Statistical Modeling</div>
+            <div style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.3rem;">Sant'Anna School of Advanced Studies &middot; A.Y. 2024/25 & 2025/26 (Lead: Prof. Chiara Seghieri)</div>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              Taught theoretical foundations and estimation of linear regression, GLMs, and multivariate data analysis. Designed computational laboratory problem sets and led hands-on programming labs in <strong>R</strong>.
+            </p>
+          </div>
+
+          <div>
+            <div style="font-weight: 700; color: var(--primary);">Executive Education Instructor & Capstone Advisor</div>
+            <div style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.3rem;">Executive Healthcare Leaders Program &middot; A.Y. 2024/25</div>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              Advised hospital Chief Medical Officers and Complex Unit Directors on capstone projects addressing emergency department patient throughput modeling, bottleneck diagnostics, and triage overcrowding alleviation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Technical Stack & Tools -->
+        <div class="info-card">
+          <h3><i class="fa-solid fa-code" style="color: var(--accent);"></i> Technical Stack & Tools</h3>
+          
+          <div class="skill-group">
+            <div class="skill-group-title">Programming & Scientific Computing</div>
+            <div class="tags-container">
+              <span class="tech-tag">R</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">SAS</span>
+              <span class="tech-tag">C / C++</span>
+              <span class="tech-tag">MATLAB</span>
+              <span class="tech-tag">Mathematica</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Statistical & AI Ecosystem</div>
+            <div class="tags-container">
+              <span class="tech-tag">Geomstats</span>
+              <span class="tech-tag">ManOpt</span>
+              <span class="tech-tag">splinets</span>
+              <span class="tech-tag">scikit-learn</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">Tidyverse</span>
+              <span class="tech-tag">GLM / Mixed Models</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Publishing & Infrastructure</div>
+            <div class="tags-container">
+              <span class="tech-tag">LaTeX</span>
+              <span class="tech-tag">Git / GitHub</span>
+              <span class="tech-tag">GitHub Pages</span>
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Adobe InDesign</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Languages</div>
+            <div style="font-size: 0.88rem; color: var(--text-muted);">
+              <strong>Italian:</strong> Native &middot; 
+              <strong>English:</strong> C1 Proficient (CEFR 97/100) &middot; 
+              <strong>French:</strong> A1 Elementary
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="mailto:claudio.mazzi@santannapisa.it" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://orcid.org/0009-0007-9407-9897" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
+      <a href="https://github.com/claudiomzi" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/in/claudio-mazzi/?isSelfProfile=true" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="cv_claudio_mazzi.pdf" target="_blank" title="PDF CV"><i class="fa-solid fa-file-pdf"></i></a>
+    </div>
+    <p>
+      &copy; 2026 Claudio Mazzi &middot; Postdoctoral Researcher &middot; Sant'Anna School of Advanced Studies, Pisa, Italy
+    </p>
+    <p style="margin-top: 0.3rem; font-size: 0.78rem;">
+      Hosted on GitHub Pages &middot; Built with modern semantic web standards &middot; GDPR Compliant
+    </p>
+  </footer>
+
+</body>
+</html>
+

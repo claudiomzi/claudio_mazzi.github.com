@@ -1,0 +1,417 @@
+%----------------------------------------------------------------------------------------
+%   CURRICULUM VITAE ET STUDIORUM - CLAUDIO MAZZI
+%   Optimized for Post-Doctoral Applications in Data Science, Statistics & AI in Healthcare
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper]{article}
+
+% --- PACKAGES & SETUP ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.7cm,top=1.4cm,bottom=1.4cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% --- COLOR PALETTE (Academic Oxford Navy & Slate) ---
+\definecolor{primary}{RGB}{16, 44, 87}       % Deep Oxford Navy
+\definecolor{secondary}{RGB}{43, 76, 126}    % Slate Blue
+\definecolor{textdark}{RGB}{33, 37, 41}      % Charcoal Black
+\definecolor{textlight}{RGB}{108, 117, 125}  % Muted Gray
+\definecolor{rulecolor}{RGB}{205, 213, 224}  % Subtle separator line
+\definecolor{awardgold}{RGB}{175, 125, 10}   % Dark goldenrod for awards
+
+% --- HYPERREF SETUP ---
+\hypersetup{
+    colorlinks=true,
+    urlcolor=secondary,
+    linkcolor=primary,
+    citecolor=primary,
+    pdftitle={Curriculum Vitae et Studiorum - Claudio Mazzi},
+    pdfauthor={Claudio Mazzi},
+    pdfkeywords={Claudio Mazzi, Curriculum Vitae, Post-Doc, Artificial Intelligence, Healthcare, Applied Statistics}
+}
+
+% --- TYPOGRAPHY & SPACING ---
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.8pt}
+\setlength{\emergencystretch}{2em}
+
+% Section title formatting
+\titleformat{\section}
+  {\color{primary}\large\bfseries}
+  {}
+  {0em}
+  {}
+  [{\color{primary}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+\titleformat{\subsection}
+  {\color{secondary}\normalsize\bfseries}
+  {}
+  {0em}
+  {}
+\titlespacing*{\subsection}{0pt}{4pt}{2pt}
+
+% Custom list styling
+\setlist[itemize]{leftmargin=*,noitemsep,topsep=1pt,partopsep=0pt,parsep=1.2pt}
+\setlist[enumerate]{leftmargin=*,noitemsep,topsep=1pt,partopsep=0pt,parsep=1.5pt}
+
+% Page numbering (Header/Footer)
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.3pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{rulecolor}\leaders\hrule height \footrulewidth\hfill}}
+\fancyfoot[L]{\color{textlight}\footnotesize Claudio Mazzi --- Curriculum Vitae et Studiorum}
+\fancyfoot[R]{\color{textlight}\footnotesize Page \thepage\ of \pageref{LastPage}}
+
+% Highlight candidate's name in publications
+\newcommand{\myname}{\textbf{Claudio Mazzi}}
+\newcommand{\mynameabbr}{\textbf{C. Mazzi}}
+
+% Professional entry command with bullet description:
+% #1: Role / Degree
+% #2: Date
+% #3: Institution / Department
+% #4: Location / Details
+% #5: Bullet description
+\newcommand{\cventry}[5]{
+  \vspace{2pt}
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & \textcolor{secondary}{\textbf{#2}} \\
+    \textit{#3} & \textit{\textcolor{textdark}{#4}}
+  \end{tabularx}
+  \vspace{-1pt}
+  {\small #5}
+  \vspace{2pt}
+}
+
+% Simple entry without bullet description:
+% #1: Role / Degree
+% #2: Date
+% #3: Institution / Department
+% #4: Location / Details
+\newcommand{\cvsimpleentry}[4]{
+  \vspace{2pt}
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & \textcolor{secondary}{\textbf{#2}} \\
+    \textit{#3} & \textit{\textcolor{textdark}{#4}}
+  \end{tabularx}
+  \vspace{1pt}
+}
+
+\begin{document}
+
+%========================================================================================
+%   PAGE 1: ACADEMIC PROFILE, EDUCATION & INTERNATIONAL RESEARCH MOBILITY
+%========================================================================================
+
+\begin{center}
+    {\Huge \textbf{\color{primary} Claudio Mazzi}}\\[3pt]
+    {\large \color{secondary} Postdoctoral Researcher \;\textbar\; Data Science, Statistics \& AI in Healthcare}\\[4pt]
+    
+    \small \color{textdark}
+    L'EMbeDS \& MeS Laboratory, Sant'Anna School of Advanced Studies, Pisa, Italy\\[3pt]
+    
+    \faEnvelope\; \href{mailto:claudio.mazzi@santannapisa.it}{\texttt{claudio.mazzi@santannapisa.it}} \quad
+    \faMapMarker*\; Pisa, Italy \\
+    \href{https://orcid.org/0009-0007-9407-9897}{\faOrcid\; ORCID} \quad\textbullet\quad
+    \href{https://github.com/claudiomzi}{\faGithub\; GitHub} \quad\textbullet\quad
+    \href{https://linkedin.com/in/claudio-mazzi/?isSelfProfile=true}{\faLinkedin\; LinkedIn}
+\end{center}
+
+\vspace{-4pt}
+
+%----------------------------------------------------------------------------------------
+%   RESEARCH PROFILE & INTERESTS
+%----------------------------------------------------------------------------------------
+\section{Research Profile \& Core Methodological Expertise}
+Physicist by training and Postdoctoral Researcher in Artificial Intelligence and Computational Statistics. Research focuses on the development of advanced statistical learning, machine learning, and AI methodologies for high-dimensional, structured, and non-Euclidean data, with applications spanning privacy-preserving synthetic data generation, uncertainty quantification, and clinical/health decision-support systems.
+\begin{itemize}
+    \item \textbf{Privacy-Preserving AI \& Synthetic Data:} Differential Privacy (DP), intrinsic Riemannian manifold statistics, and functional synthetic data generation from single or sparse trajectories.
+    \item \textbf{Functional Data Analysis \& Uncertainty Quantification:} Reproducing Kernel Hilbert Space (RKHS) theory, non-stationary kernel engines, orthonormal splinet expansions, and conformal prediction bands for complex stochastic processes ($N = 1$).
+    \item \textbf{Machine Learning \& Explainable AI in Healthcare:} Predictive risk stratification, disease complication forecasting in chronic populations (Type-2 Diabetes), NLP-driven classification of clinical risk and workplace aggression in health services.
+    \item \textbf{Actuarial Statistics \& Health Systems Benchmarking:} Stochastic loss-reserving methodologies for medical malpractice liabilities and systematic performance auditing across regional administrative health records.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\cventry{Ph.D. in Artificial Intelligence for Society}{Nov 2023 -- Oct 2026 (Expected)}
+{University of Pisa \& Sant'Anna School of Advanced Studies}{Pisa, Italy}
+{
+\begin{itemize}
+    \item \textit{National Ph.D. Program in Artificial Intelligence (39\textsuperscript{th} Cycle)}, funded by the Italian Ministry of University and Research (MUR). Joint degree between University of Pisa and Sant'Anna School of Advanced Studies.
+    \item \textit{Institutional Affiliations:} Department of Computer Science, University of Pisa and L'EMbeDS, Sant'Anna School of Advanced Studies.
+    \item \textit{Doctoral Research Focus:} Advanced statistical machine learning, explainable AI and NLP methods for healthcare decision support and health analytics. Advisor: Prof. Chiara Seghieri.
+\end{itemize}
+}
+
+\cventry{Visiting Researcher}{Sep 2026 -- Oct 2026}
+{Department of Mathematics and Statistics, Auburn University}{Auburn, Alabama, USA}
+{
+\begin{itemize}
+    \item \textit{Host \& Academic Collaborator:} Prof. Roberto Molinari.
+    \item \textit{Research Program:} Methodological research in functional data analysis and non-stationary kernel engines. Investigating RKHS inductive bias and orthonormal splinet expansions for synthetic functional data generation from single longitudinal trajectories ($N = 1$).
+\end{itemize}
+}
+
+\cventry{Master's Degree in Physics}{Graduation Mar 2021 (A.Y. 2019/2020)}
+{University of Milan-Bicocca}{Milan, Italy \;\textbar\; Final Grade: 108 / 110}
+{
+\begin{itemize}
+    \item \textit{Dissertation:} Large Charge Expansion and Semiclassical Method.\\The $XYZ$-model in BPS and superfluid phase.
+\end{itemize}
+}
+
+\cvsimpleentry{Bachelor's Degree in Physics}{Graduation Mar 2017 (A.Y. 2015/2016)}
+{University of Milan-Bicocca}{Milan, Italy \;\textbar\; Final Grade: 98 / 110}
+
+%----------------------------------------------------------------------------------------
+%   VISITING RESEARCH APPOINTMENTS
+%----------------------------------------------------------------------------------------
+%\section{Visiting Research Appointments}
+
+
+
+\newpage
+
+%========================================================================================
+%   PAGE 2: COMPREHENSIVE ACADEMIC & RESEARCH APPOINTMENTS
+%========================================================================================
+
+\section{Academic \& Professional Experience}
+
+\cventry{Postdoctoral Researcher}{Nov 2026 -- Present}
+{L'EMbeDS, Sant'Anna School of Advanced Studies}{Pisa, Italy}
+{
+\begin{itemize}
+    \item \textbf{Advanced Methodological Research:} Developing advanced statistical learning, machine learning, and AI methodologies for high-dimensional and structured data.
+    \item \textbf{Core Domains:} Research focuses on Differential Privacy (DP), intrinsic Riemannian manifold statistics, privacy-preserving synthetic data generation, and functional uncertainty quantification.
+    \item \textbf{Translational Healthcare Analytics:} Translating complex primary and secondary clinical data into evidence-based, explainable decision-support frameworks and health systems performance evaluation models.
+\end{itemize}
+}
+
+\cventry{Research Collaborator}{Jan 2024 -- Present}
+{MeS Laboratory, Sant'Anna School of Advanced Studies}{Pisa, Italy}
+{
+\begin{itemize}
+    \item \textbf{Performance Evaluation System:} Appointed to develop, compute, validate, and benchmark performance indicators within the Inter-Regional Healthcare Performance Evaluation System. Areas of analysis include emergency care efficiency, access to inpatient and outpatient services, institutional scientific productivity, and clinical risk.
+    \item \textbf{Healthcare Claims Reserving:} Appointed to develop a deployable methodology for the actuarial and statistical estimation of healthcare claims reserves (\textit{riserva sinistri}) for the Tuscany Regional Health Authority (\textit{Regione Toscana}); designed and implemented an advanced stochastic claims reserving model formally integrated into regional administrative decision-making processes.
+\end{itemize}
+}
+
+\cventry{Research Fellow}{Mar 2025 -- Aug 2025}
+{Department of Cultures and Societies, University of Palermo}{Palermo, Italy}
+{
+\begin{itemize}
+    \item \textbf{National Research Project PRIN RETIN:} Acted as research data scientist analyzing large-scale Chronic Related Group (\textit{CReG}) longitudinal registries for cohorts of patients diagnosed with Type-2 Diabetes Mellitus.
+\end{itemize}
+}
+
+\cventry{Research Fellow}{Dec 2022 -- Oct 2023}
+{MeS Laboratory, Sant'Anna School of Advanced Studies}{Pisa, Italy}
+{
+\begin{itemize}
+    \item \textbf{Interdisciplinary Actuarial Research:} Conducted collaborative research with The BioRobotics Institute on stochastic loss-reserving techniques for medical malpractice liability in public hospitals; the developed mathematical framework was officially adopted and operationalized by the Tuscany Regional Health Authority.
+    \item \textbf{Data Infrastructure Management:} Managed the administrative data pipelines for outpatient and emergency registries.
+    \item \textbf{Healthcare Workforce Well-Being Project:} Co-designed statistical pipelines and authored comprehensive evaluation monographs on organizational climate and healthcare personnel well-being.
+\end{itemize}
+}
+
+\cventry{Research Collaborator}{Jul 2022 -- Nov 2022}
+{MeS Laboratory, Sant'Anna School of Advanced Studies}{Pisa, Italy}
+{
+\begin{itemize}
+    \item Supervised data cleaning, consolidation, and indicator computation for outpatient services, emergency records, and regional health research monitoring.
+\end{itemize}
+}
+
+\cvsimpleentry{High School Teacher of Mathematics and Physics}{Sep 2020 -- Jun 2022}
+{Liceo Melchiorre Gioia \& Liceo Scientifico Lorenzo Respighi}{Piacenza, Italy}
+
+\newpage
+
+%========================================================================================
+%   PAGE 3: SCHOLARLY OUTPUT & PUBLICATIONS
+%========================================================================================
+
+\section{Publications \& Scholarly Output}
+
+\subsection{Articles in Peer-Reviewed International Journals}
+\begin{enumerate}
+    \item \myname, Angelo Damone, Andrea Vandelli, Gastone Ciuti, and Milena Vainieri (2024). 
+    ``Stochastic Claims Reserve in the Healthcare System: A Methodology Applied to Italian Data''. 
+    \textit{Risks}, 12(2), 24. \\
+    \href{https://doi.org/10.3390/risks12020024}{\small\color{secondary}\faExternalLink* DOI: 10.3390/risks12020024}
+\end{enumerate}
+
+\subsection{Refereed Conference Proceedings \& Book Chapters}
+\begin{enumerate}[resume]
+    \item \mynameabbr, Roberto Molinari, and Chiara Seghieri (2025). 
+    ``Machine Learning and Explainable AI for Type-2 Diabetes Management''. 
+    In: \textit{Statistical Learning, Data Science and Complex Data}, pp.~175--180. Springer Nature Switzerland. \\
+    \href{https://doi.org/10.1007/978-3-031-96736-8_30}{\small\color{secondary}\faExternalLink* DOI: 10.1007/978-3-031-96736-8\_30}
+
+    \item Chiara Ferrara, Matilde Bisi, \myname, Francesca Chiaromonte, Paolo Ferragina, Massimo Ughi, and Chiara Seghieri (2026). 
+    ``Identifying Structural Typologies of Workplace Aggression in Healthcare: A Text--Validated Analysis of Toscana Nord Ovest Reports''. 
+    In: \textit{Statistical Science: From Theory to Applied Research IV}, Springer Nature Switzerland, Cham. \\
+    \href{https://doi.org/10.1007/978-3-032-30665-4_7}{\small\color{secondary}\faExternalLink* DOI: 10.1007/978-3-032-30665-4\_7} \\
+    \textcolor{awardgold}{\small\faTrophy\; \textbf{Winner of the Best Poster Award at the SIS FENStatS 2026 Conference.}}
+\end{enumerate}
+
+\subsection{Working Papers \& Preprints}
+\begin{enumerate}[resume]
+    \item \myname, Roberto Molinari, and Jacopo Di Iorio (2026). 
+    ``Synthetic Functional Data Generation from a Single Trajectory ($N = 1$): RKHS Inductive Bias, Orthonormal Splinets, and the Splinet-Modulated Non-Stationary (SMNS) Kernel Engine''. 
+    \textit{Working Paper / In Preparation for Submission}.
+    
+    \item \myname, Matilde Contestabile, Paolo Ferragina, Monica Chill\`a, Gaetana Morgante, Francesca Chiaromonte, Massimo Ughi, and Chiara Seghieri (2026). 
+    ``Locally Deployable AI for Legal Classification and Risk Stratification of Workplace Violence in Healthcare: A Retrospective Study from Italy''. 
+    \textit{Available at SSRN}: \\
+    \href{https://ssrn.com/abstract=7165564}{\small\color{secondary}\faExternalLink* SSRN: 7165564} \;\textbar\; 
+    \href{https://doi.org/10.2139/ssrn.7165564}{\small\color{secondary}DOI: 10.2139/ssrn.7165564}
+\end{enumerate}
+
+\subsection{Manuscripts Under Peer Review}
+\begin{enumerate}[resume]
+    \item Benedetta Dal Canto, \myname, Giaele Moretti, Bruna Vinci, Domenico Di Giorgio, Oscar Cruciani, Stefania Vasselli, and Milena Vainieri (2026). 
+    ``Predicting Drug Shortages: An Explainable Machine Learning Study Using Administrative Data''. 
+    Submitted to: \textit{Health Care Management Science}.
+
+    \item \myname, Chiara Seghieri, Roberto Molinari, Paolo Berta, and Mauro Ferrante (2026). 
+    ``Machine Learning and Explainable AI for Type-2 Diabetes Management: A Multi-Regional Study Using Administrative Health Data''. 
+    Submitted to: \textit{Journal of the Royal Statistical Society: Series C}.
+\end{enumerate}
+
+\subsection{Institutional Research Monographs \& Policy Evaluation Reports}
+\begin{enumerate}[resume]
+    \item Nicola Bell\`e, Paola Cantarelli, Domenico Cerasuolo, Giuseppe D’Orio, \myname, and Luca Scopis (2023). 
+    \textit{Indagine di clima organizzativo 2023 - Azienda Sanitaria dell’Alto Adige}. 
+    Sant’Anna School of Advanced Studies. \\
+    \href{https://hdl.handle.net/11382/561352}{\small\color{secondary}\faExternalLink* Handle: 11382/561352}
+
+    \item Nicola Bell\`e, Paola Cantarelli, Luca Pirrotta, Luca Scopis, Veronica Cruciani, Domenico Cerasuolo, \myname, and Giuseppe D’Orio (2023). 
+    \textit{Indagine di clima organizzativo - Sistema sanitario della Toscana - 2023}. 
+    Sant’Anna School of Advanced Studies. \\
+    \href{https://hdl.handle.net/11382/555572}{\small\color{secondary}\faExternalLink* Handle: 11382/555572}
+
+    \item Nicola Bell\`e, Paola Cantarelli, Luca Pirrotta, Luca Scopis, \myname, and Giuseppe D’Orio (2023). 
+    \textit{Indagine di clima organizzativo - Sistema socio sanitario del Veneto - 2023}. 
+    Sant’Anna School of Advanced Studies. \\
+    \href{https://hdl.handle.net/11382/553332}{\small\color{secondary}\faExternalLink* Handle: 11382/553332}
+\end{enumerate}
+
+\newpage
+
+%========================================================================================
+%   PAGE 4: CONFERENCES, TEACHING & SKILLS
+%========================================================================================
+
+\section{Conferences \& Presentations}
+
+\subsection{Oral Presentations at National \& International Conferences}
+\begin{itemize}
+    \item \textbf{SIS 2025 Statistics for Innovation} --- Intermediate Scientific Meeting of the Italian Statistical Society, 2025.
+    16-18 June 2025, University of Genova, Genova, Italy.
+    \item \textbf{L’EMbeDS and FAIR SMaRT COnSTRUCT} --- Learning from large, complex and structured data: advances in methods and applications.
+    3 June 2025. Sant'Anna School of Advanced Studies, Pisa, Italy.
+\end{itemize}
+
+\subsection{Peer-Reviewed Conference Abstracts \& Posters}
+\begin{itemize}
+    \item \textbf{SIS-FENStatS 2026} --- 52\textsuperscript{nd} Scientific Meeting of the Italian Statistical Society;
+    22--25 June 2026, University La Sapienza, Roma, Italy. Poster: ``Identifying Structural Typologies of Workplace
+    Aggression in Healthcare: A Text–Validated
+    Analysis of Toscana Nord Ovest Reports''
+    
+    \item \textbf{CS2Italy 2026} --- The Italian Conference On Computational Social Science; 19--21 May 2026, OGR Turin, Italy. Poster: ``Monitoring Violence Against Healthcare Workers with LLMs: the Case of the Local Health Authority Toscana Nord Ovest (Italy)''
+    
+    \item \textbf{21\textsuperscript{st} Meeting of the Diabetic Foot Study Group} --- 24--26 September 2026. Florence. Abstract: ``Uncovering Heterogeneity in Diabetic Foot Care Pathways through Stochastic Conformance Checking''. 
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   TEACHING & PROFESSIONAL TRAINING EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Teaching Experience}
+
+\cventry{Teaching Assistant}{A.Y. 2024/25 \& 2025/26}
+{Sant'Anna School of Advanced Studies}{Pisa, Italy}
+{
+\begin{itemize}
+    \item \textit{Course:} \textbf{Applied Statistical Modeling} (Lead Instructor: Prof. Chiara Seghieri).
+    \item Teaching methodological and applied knowledge of statistical models for analyzing different types of response variables and data. In particular, the course addresses properties, estimation methods, and practical applications of the linear regression model, GLM, and  introduction to multivariate data analysis.
+    \item Designed computational lab problem sets and led hands-on programming tutorials in \textbf{R}.
+\end{itemize}
+}
+
+\cventry{Executive Education Instructor \& Project Work Advisor}{A.Y. 2024/2025}
+{Sant'Anna School of Advanced Studies (Executive Healthcare Leaders Program)}{Pisa, Italy}
+{
+\begin{itemize}
+    \item Faculty advisor for executive capstone projects presented by hospital chief medical officers and directors of complex healthcare operational units (\textit{Dirigenti di Struttura Complessa}).
+    \item \textit{Domain Focus:} Emergency Department operations management, patient throughput modeling, bottleneck analytics, and triage overcrowding alleviation.
+\end{itemize}
+}
+
+%----------------------------------------------------------------------------------------
+%   ADVANCED COURSES & SPECIALIZED TRAINING
+%----------------------------------------------------------------------------------------
+\section{Advanced Courses \& Specialized Training}
+\begin{itemize}
+    \item \textbf{Doctoral school on Artificial Intelligence and Cybersecurity}, Sapienza University of Rome, Italy \hfill \textcolor{secondary}{\textbf{4-6 Dec 2023}}
+    \item \textbf{ECDL / ICDL (European Computer Driving Licence)}, AICA \hfill \textcolor{secondary}{\textbf{Jun 2010}}
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS & COMPETENCIES
+%----------------------------------------------------------------------------------------
+\section{Skills \& Competencies}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Languages:} Italian (Native); English (\textbf{C1 Proficient} --- CEFR Certificate, score 97/100, Excellent); French (\textbf{A1} --- Elementary).
+    \item \textbf{Programming \& Scientific Computing:} Python, R, SAS, C/C++, MATLAB, Mathematica.
+    \item \textbf{Typesetting \& Tools:} \LaTeX, Git, GitHub, Markdown, Microsoft Office Suite, Power BI, Adobe InDesign, Canva.
+\end{itemize}
+
+\vspace{6pt}
+\begin{center}
+    \scriptsize\color{textlight}
+    \textit{In compliance with the Italian Legislative Decree no. 196/2003 and the GDPR (EU 2016/679), I authorize the processing of my personal data for recruitment purposes.}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%   DATE & SIGNATURE
+%----------------------------------------------------------------------------------------
+
+\vspace{1.5cm}
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+Pisa, 29 September 2026
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\centering
+Signature
+
+\vspace{1.5cm}
+
+\rule{5cm}{0.4pt}
+\end{minipage}
+
+
+
+\end{document}
